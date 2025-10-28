@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import RecipeList from '../../components/RecipeList';
+
+const recipes = [
+  { name: 'Banana Pancakes', ingredients: ['flour', 'milk', 'egg'] , instructions:['Mix ingredients', 'Cook on skillet']},
+  { name: 'Tomato Soup', ingredients: ['tomatoes', 'onion', 'garlic'], instructions: ['Chop vegetables', 'Simmer in pot'] }
+];
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <RecipeList recipes={recipes} />
       <StatusBar style="auto" />
     </View>
   );
